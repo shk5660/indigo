@@ -1,6 +1,6 @@
 # main text of home
 name: Sang-Hyeon
-bio: Story on Data: 데이터로 썰풀기
+bio: Story Maker on Data
 
 # twitter summary info
 # description: A blog about technology and stuff related
@@ -54,7 +54,7 @@ email: shk5660@gmail.com
 authors:
     Sang-Hyeon:
         name: Sang-Hyeon Kim
-        bio: Story on Data: 데이터로 썰풀기
+        bio: Story Maker on Data
         external-image: true
         picture: assets/images/ps.jpg
         # twitter: johndoe
