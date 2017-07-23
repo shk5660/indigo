@@ -7,7 +7,7 @@ bio: Story Maker on Data
 
 # if it's an external image, update below for true
 # better with square images
-external-image: true
+external-image: false
 picture: assets/images/ps.jpg
 
 # If you want to include your resume, set to true
@@ -29,9 +29,9 @@ permalink: /:title/
 # analytics-piwik-id: 1
 
 # if you don't want comments in your posts, leave categories empty
-disqus:
-  shortname: mydisqus # enter this from your disqus account
-  categories: [blog, project] # only show disqus for posts that have these categories
+#disqus:
+ # shortname: mydisqus # enter this from your disqus account
+ # categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
 # facebook: myfacebook
@@ -55,8 +55,8 @@ authors:
     Sang-Hyeon:
         name: Sang-Hyeon Kim
         bio: Story Maker on Data
-        external-image: true
-        picture: blog/assets/images/ps.jpg
+        external-image: false
+        picture: assets/images/ps.jpg
         # twitter: johndoe
 
 # do you want a larger site? change the option below
@@ -88,7 +88,7 @@ related: true
 post-advance-links: [blog]
 
 # show author block at the end of a post ?
-show-author: false
+show-author: true
 
 # do you want some animations?
 animation: true
