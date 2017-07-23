@@ -55,8 +55,8 @@ authors:
     Sang-Hyeon:
         name: Sang-Hyeon Kim
         bio: Story Maker on Data
-        external-image: true
-        picture: shk5660.github.io/assets/images/ps.jpg
+        external-image: false
+        picture: assets/images/ps.jpg
         # twitter: johndoe
 
 # do you want a larger site? change the option below
