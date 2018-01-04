@@ -1,6 +1,6 @@
 # main text of home
 name: Sang-Hyeon
-bio: Studying Data and Vis with R
+bio: Beyond the Scientist, To be a Designer
 
 # twitter summary info
 # description: A blog about technology and stuff related
@@ -34,7 +34,7 @@ permalink: /:title/
  # categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-# facebook: myfacebook
+facebook: harry5662
 # twitter: mytwitter
 # google: shk5660
 # instagram: myinstagram
@@ -57,7 +57,6 @@ authors:
         bio: Studying Data and Vis with R
         external-image: false
         picture: assets/images/ps.jpg
-        # twitter: johndoe
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
@@ -65,11 +64,11 @@ authors:
 width: normal
 
 # if you don't need pagination, comment the *paginate* configs below
-# paginate: 5
-# paginate_path: "blog/:num/"
+paginate: 10
+paginate_path: "blog/:num/"
 
 # if you don't need projects, comment the *projects* configs below
-projects: false
+projects: true
 
 # if you don't need "about" or "blog", comment them out below
 about: false
