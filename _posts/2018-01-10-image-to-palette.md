@@ -1,11 +1,17 @@
 ---
+title: "Image to Palette with R"
 layout: post
-published: true
-title: Image to Palette with R
-author: Sang-Hyeon
-date: 2018-01-10
-categories: blog
-tags: R imager palette k-means vis
+date: 2018-01-11 02:51
+image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- R
+- imager
+- palette
+- vis
+category: blog
+author: sang-hyeon
+description: Palette production project with R
 ---
 
 Intro
