@@ -2,8 +2,6 @@
 title: "Image to Palette with R"
 layout: post
 date: 2018-01-11 02:51
-image: /assets/images/markdown.jpg
-headerImage: false
 tag:
 - R
 - imager
@@ -14,7 +12,7 @@ author: sang-hyeon
 description: Palette production project with R
 ---
 
-Intro
+## Intro
 -----
 
 ------------------------------------------------------------------------
@@ -34,7 +32,7 @@ Intro
 
 <br /><br />
 
-1. Quantizing Image Using K-Means
+## 1. Quantizing Image Using K-Means
 ---------------------------------
 
 ------------------------------------------------------------------------
@@ -110,7 +108,7 @@ img_quantize(hanok, 6) # 6개의 색으로 Clustering
 
 <br /><br />
 
-2. Visualization
+## 2. Visualization
 ----------------
 
 ------------------------------------------------------------------------
@@ -230,7 +228,7 @@ K level에 따라 각각 다른 대표 색상들이 뽑혔다. 난 개인적으�
 
 <br /><br />
 
-3. Make Palette
+## 3. Make Palette
 ---------------
 
 ------------------------------------------------------------------------
@@ -339,7 +337,7 @@ ggplot(diamonds, aes(cut, fill = cut)) +
 
 <br /><br />
 
-Outro
+## Outro
 -----
 
 ------------------------------------------------------------------------
