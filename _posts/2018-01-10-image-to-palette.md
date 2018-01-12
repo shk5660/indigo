@@ -46,7 +46,7 @@ hanok <- load.image('hanok_img.jpg')
 
 ![](/assets/post_images/2018-01-10-image-to-palette/hanok_img.jpg)
 
-다음으로 K-means를 이용하여 RGB 값들을 K개의 대표 색상으로 Clustering하고, PCA를 이용하여 2차원에 표현할 수 있도록 하는 정보들을 담은 데이터 프레임을 생성한다.
+다음으로 K-means를 이용하여 RGB 값들을 K개의 대표 색상으로 Clustering하고, RGB 값에 대한 PCA 정보들이 담긴 데이터 프레임을 생성한다.
 
 ``` r
 img_quantize <- function(img, level){
@@ -105,9 +105,7 @@ img_quantize(hanok, 6) # 6개의 색으로 Clustering
 <br /><br />
 
 ## 2. Visualization
-----------------
-
-------------------------------------------------------------------------
+---
 
 위에서 K개로 군집화 된 색상을 한 눈에 볼 수 있는 여러가지 시각화 함수를 만들어 보았다. 먼저 양자화 후의 이미지를 보여주는 함수다.
 
@@ -218,16 +216,14 @@ vis_compare <- function(img, levels){
 vis_compare(hanok, levels = c(4, 6, 8))
 ```
 
-<img src="_posts/posting_files/figure-markdown_github/2018-01-10-image-to-palette/unnamed-chunk-10-4.png" style="display: block; margin: auto;" /> 
+![](/assets/post_images/2018-01-10-image-to-palette/unnamed-chunk-10-4.png)
 
 K level에 따라 각각 다른 대표 색상들이 뽑혔다. 난 개인적으로 이 중 K = 8 일때의 색상 값들이 제일 마음에 든다. 나무의 색깔들이 잘 표현되어 있는 듯 하다. 이제 선택한 8개의 색상에 대한 팔레트를 만들어 볼 차례다.
 
 <br /><br />
 
 ## 3. Make Palette
----------------
-
-------------------------------------------------------------------------
+---
 
 팔레트를 만들 때 실제로 필요한 것은 내가 선택한 8개의 색깔에 대한 Hex 값들이다. K level을 설정하여 Hex 값을 반환하는 함수를 생성하자.
 
@@ -308,7 +304,7 @@ pal_hanok <- hex2pal(hex_hanok, n = 8, type = 'discrete')
 pal_hanok
 ```
 
-<img src="_posts/posting_files/figure-markdown_github/2018-01-10-image-to-palette/unnamed-chunk-14-1.png" style="display: block; margin: auto;" /> 
+![](/assets/post_images/2018-01-10-image-to-palette/unnamed-chunk-14-1.png)
 
 나는 이 팔레트에서 마음에 드는 5가지의 색깔만 뽑아쓰고 싶다.
 
@@ -327,19 +323,17 @@ ggplot(diamonds, aes(cut, fill = cut)) +
   scale_fill_manual(values = pal_hanok)
 ```
 
-<img src="_posts/posting_files/figure-markdown_github/2018-01-10-image-to-palette/unnamed-chunk-16-1.png" style="display: block; margin: auto;" /> 
+![](/assets/post_images/2018-01-10-image-to-palette/unnamed-chunk-16-1.png)
 
 한옥의 아름다움이 고스란히 담긴 훌륭한(??) 그래프가 완성되었다!
 
 <br /><br />
 
 ## Outro
------
+---
 
-------------------------------------------------------------------------
-
-지금까지의 내용들을 학회 컨퍼런스에서 발표하며, 있어보이기 위해(ㅎ) 패키지화를 시켰다.(솔직히 패키지라고 말하기 부끄럽다.) [바로 여기](https://github.com/shk5660/img2pal)에 올려놓았고, `devtools::install_github('shk5660/img2pal)`을 실행해서 설치 할 수 있다.
+지금까지의 내용들을 학회 컨퍼런스에서 발표하며, 있어보이기 위해 패키지화를 시켰다.(솔직히 패키지라고 말하기 부끄럽다.) [바로 여기](https://github.com/shk5660/img2pal)에 올려놓았고, `devtools::install_github('shk5660/img2pal)`을 실행해서 설치 할 수 있다.
 
 하지만 만들어놓고 보니 정말이지 패키지라고 부르기 부끄러운, 조악한 퀄리티를 가지고 있다. 이번 겨울동안 다시 코드들을 사용하기 편하게 재정비하고, 조금 덜 부끄러운 패키지로 업그레이드 시켜보려 한다.
 
-그리고 마지막으로 좋은 사이트를 하나 소개하려한다. [이 사이트](https://www.canva.com/color-palette/)는 사진에서 팔레트를 추출해주는 웹페이지이다. 매우 빠른데다가 예쁘게 잘 뽑아준다!! 몇일동안 개고생한 나에게 심심한 위로를 건낸다.
+그리고 마지막으로 좋은 사이트를 하나 소개하려한다. [이 사이트](https://www.canva.com/color-palette/)는 사진에서 팔레트를 추출해주는 웹페이지이다. 매우 빠른데다가 예쁘게 잘 뽑아준다!! 세상의 발전은 99%의 뻘짓으로 이루어지는 법이다!
