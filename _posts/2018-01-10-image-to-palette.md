@@ -13,9 +13,7 @@ description: Palette production project with R
 ---
 
 ## Intro
------
-
-------------------------------------------------------------------------
+---
 
 최근 **Color Quantization**에 관련된 흥미로운 게시물들을 읽었다. Color Quantization이라는 개념은 보기와는 다르게 생각보다 간단한 개념이다. 우리는 실생활 속에서 항상 색상 양자화를 하며 살아가고 있다. 하나의 이미지(우리가 일상 속에서 마주치는 수 많은 View들)는 엄청나게 많은 종류의 색깔을 가지고 있다. 하지만 우리가 직관적으로 이를 인식할 때에, 그 많은 색깔을 하나하나 전부 받아들이지 않는다.
 
@@ -33,7 +31,7 @@ description: Palette production project with R
 <br /><br />
 
 ## 1. Quantizing Image Using K-Means
----------------------------------
+---
 
 먼저 팔레트화 시킬 한옥 이미지를 불러오자.
 
@@ -46,7 +44,7 @@ library(gridExtra)
 hanok <- load.image('hanok_img.jpg')
 ```
 
-![](assets/post_images/2018-01-10-image-to-palette/hanok_img.jpg)
+![](/assets/post_images/2018-01-10-image-to-palette/hanok_img.jpg)
 
 다음으로 K-means를 이용하여 RGB 값들을 K개의 대표 색상으로 Clustering하고, PCA를 이용하여 2차원에 표현할 수 있도록 하는 정보들을 담은 데이터 프레임을 생성한다.
 
