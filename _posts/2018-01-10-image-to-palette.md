@@ -21,7 +21,7 @@ description: Palette production project with R
 
 ![](http://static.pexels.com/photos/515560/pexels-photo-515560.jpeg)
 
-예를 들어, 노을이 지는 풍경을 바라볼 때에 노을의 그라데이션 속에 있는 모든 색깔을 하나하나 인지하며, '아, 정말 아름답다!'라고 생각하지 않는다는 것이다. 주홍빛, 조금 더 옅은, 조금 더 진한 주홍빛, 그리고 불타는 노을과 맞닿아 있는 약간은 덜 익은 밤하늘의 색. 이렇게 색깔을 어느정도 범주화하여 받아들인다. 이 게시물들은 R을 이용하여 색상을 양자화 시켜보는 방법을 담고 있다. 글들을 읽던 중, 양자화 방법을 조금 더 응용하여 재미있는 실험을 하고 싶어졌다. (아래 게시물 먼저 읽어 주세요!)
+예를 들어, 노을이 지는 풍경을 바라볼 때에 노을의 그라데이션 속에 있는 모든 색깔을 하나하나 인지하며, '아, 정말 아름답다!'라고 생각하지 않는다는 것이다. 주홍빛, 조금 더 옅은, 조금 더 진한 주홍빛, 그리고 불타는 노을과 맞닿아 있는 약간은 덜 익은 밤하늘의 색. 이렇게 색깔을 어느정도 범주화하여 받아들인다. 아래 게시물들은 R을 이용하여 색상을 양자화 시켜보는 방법을 담고 있다. 글들을 읽던 중, 양자화 방법을 조금 더 응용하여 재미있는 실험을 하고 싶어졌다.
 
 > **About Color Quantization**
 >
@@ -35,8 +35,6 @@ description: Palette production project with R
 ## 1. Quantizing Image Using K-Means
 ---------------------------------
 
-------------------------------------------------------------------------
-
 먼저 팔레트화 시킬 한옥 이미지를 불러오자.
 
 ``` r
@@ -48,7 +46,7 @@ library(gridExtra)
 hanok <- load.image('hanok_img.jpg')
 ```
 
-<img src="_posts/posting_files/figure-markdown_github/2018-01-10-image-to-palette/unnamed-chunk-2-1.png" style="display: block; margin: auto;" /> 
+![](assets/post_images/2018-01-10-image-to-palette/hanok_img.jpg)
 
 다음으로 K-means를 이용하여 RGB 값들을 K개의 대표 색상으로 Clustering하고, PCA를 이용하여 2차원에 표현할 수 있도록 하는 정보들을 담은 데이터 프레임을 생성한다.
 
